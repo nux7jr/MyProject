@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: small;
+}
+.container {
+  margin: 0 15% 0 15%;
+  border: 2px solid brown;
+}
+header {
+  background-color: rgba(168, 170, 166, 0.767);
+  width: 100%;
+}
+.nav {
+  margin: 0 15% 0 15%;
+  padding-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.menu {
+}
+.menu-item {
+  display: inline;
+}
+.header-info {
+  margin: 0 15% 0 15%;
+}
+.card {
+  display: flex;
+}
+.card-item {
+  display: flex;
+  flex-wrap: wrap;
+}
