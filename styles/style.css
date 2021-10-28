@@ -30,6 +30,10 @@ header {
 }
 .header-info {
   margin: 0 15% 0 15%;
+  background-image: url(/img/slide1.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 60%;
 }
 .card {
   display: flex;
@@ -37,4 +41,7 @@ header {
 .card-item {
   display: flex;
   flex-wrap: wrap;
+}
+.header-info__item {
+  display: inline;
 }
