@@ -16,7 +16,7 @@ body {
 }
 .container {
   margin: 2% 15% 0 15%;
-  border: 2px solid brown;
+
   /* Ннужно убрать */
 }
 header {
@@ -52,16 +52,16 @@ header {
 }
 .card {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .card-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-size: 0.8rem;
+  text-align: center;
+  flex: 1 0 33%;
 }
 .card-image {
-  display: flex;
-  justify-content: center;
+  height: 55%;
 }
 .main-info {
   display: flex;
@@ -78,5 +78,10 @@ header {
   padding: 0;
 }
 .main-info__text__img {
-  image-re;
+}
+.info-about-us_item__list {
+  display: flex;
+}
+.info-about-us_item__list p {
+  display: flex;
 }
