@@ -1,15 +1,26 @@
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
 body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  place-content: center;
+  font-family: system-ui, sans-serif;
   padding: 0;
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: small;
 }
 .container {
-  margin: 0 15% 0 15%;
+  margin: 2% 15% 0 15%;
   border: 2px solid brown;
+  /* Ннужно убрать */
 }
 header {
-  background-color: rgba(168, 170, 166, 0.767);
+  background-color: #eeeeee;
   width: 100%;
 }
 .nav {
@@ -23,25 +34,49 @@ header {
   margin: 0;
   list-style: none;
 }
-.menu {
-}
 .menu-item {
   display: inline;
 }
 .header-info {
   margin: 0 15% 0 15%;
-  background-image: url(/img/slide1.png);
+  /* background-image: url(/img/social-media.png); */
   background-repeat: no-repeat;
   background-position: right;
   height: 60%;
 }
+.header-info__item {
+  display: flex;
+}
+.header-info__item__text {
+  font-size: 3rem;
+}
 .card {
   display: flex;
+  justify-content: center;
 }
 .card-item {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.header-info__item {
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+.main-info {
+  display: flex;
+}
+.main-info__item {
+  flex: 1 0 50%;
+}
+.info-about-us p {
   display: inline;
+}
+.main-info__text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-info__text__img {
+  image-re;
 }
