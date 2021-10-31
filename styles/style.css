@@ -29,6 +29,7 @@ body {
 header {
   background-color: #eeeeee;
   width: 100%;
+  min-height: 80%;
 }
 .nav {
   margin: 0 15% 0 15%;
@@ -52,7 +53,7 @@ header {
   user-select: none;
 }
 .nav a:hover {
-  text-decoration: none; /* Добавляем подчеркивание при наведении курсора на ссылку */
+  text-decoration: none;
   color: #283136;
 }
 .btn-order {
@@ -126,25 +127,25 @@ header {
   justify-content: space-evenly;
 }
 .btnOrder {
-  color: rgb(153, 75, 75);
   font-family: var(--ff);
   font-weight: 600;
-  user-select: none;
   padding: 0;
   outline: none;
   border: none;
   border: none;
   color: #ffffff;
-  margin: 2% 0 5% 0;
-  padding: 2% 5% 2% 5%;
+  padding: 5% 10% 5% 10%;
+  /* нужно сделать пиксели */
   background-color: #fb565a;
 }
-.btnOrder:first-child {
-  background-color: cadetblue;
+.card-item:nth-child(2) .btnOrder {
+  background-color: #00ca74;
+  /* ?padding or  */
 }
-.btnOrder:last-child(1) {
-  background-color: rgb(10, 10, 10);
+.card-item:nth-child(3) .btnOrder {
+  background-color: #efc849;
 }
+
 .main-info {
   display: flex;
 }
@@ -154,6 +155,9 @@ header {
 .info-about-us_card {
   display: flex;
   flex-wrap: wrap;
+}
+.info-about-us img {
+  margin-left: 70%;
 }
 .main-info__text img {
   padding: 0 1% 1% 0;
@@ -176,4 +180,24 @@ header {
 }
 .info-about-us_item__card__list img {
   padding: 0 0 5% 0;
+}
+hr {
+  margin: 5% 0% 5% 0;
+}
+hr:nth-last-child() {
+  margin: 0;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+  padding: 0 0 5% 0;
+}
+.footer-info p {
+  margin: 0;
+  font-family: var(--ff);
+  font-weight: 500;
+}
+.footer-info a {
+  text-decoration: none;
+  color: black;
 }
