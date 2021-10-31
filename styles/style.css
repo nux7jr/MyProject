@@ -23,8 +23,9 @@ body {
 }
 .container {
   margin: 2% 15% 0 15%;
-
-  /* Ннужно убрать */
+}
+.visually-hidden {
+  display: none;
 }
 header {
   background-color: #eeeeee;
@@ -108,23 +109,13 @@ header {
 .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: stretch;
 }
 .card-item {
   flex: 1 0 33%;
 }
-.card-item p {
-  max-width: 90%;
-  margin: 2% 0 2% 0;
-}
-.card-item h2 {
-  margin: 2% 0 2% 0;
-}
-.card-image {
-  height: 55%;
-}
-.card-image img {
-  justify-content: space-evenly;
+
+.card-item img {
 }
 .btnOrder {
   font-family: var(--ff);
@@ -134,7 +125,7 @@ header {
   border: none;
   border: none;
   color: #ffffff;
-  padding: 5% 10% 5% 10%;
+  padding: 15px 30px 15px 30px;
   /* нужно сделать пиксели */
   background-color: #fb565a;
 }
@@ -169,6 +160,7 @@ header {
 }
 .info-about-us_item__card {
   display: flex;
+  /* flex-wrap: wrap; @media*/
 }
 .info-about-us_item__card p {
   padding: 0;
@@ -188,16 +180,28 @@ hr:nth-last-child() {
   margin: 0;
 }
 .footer-info {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
-  padding: 0 0 5% 0;
+  display: flex;
+  padding-bottom: 2%;
+  justify-content: space-between;
+}
+.footer-info li {
+  display: inline;
+}
+.footer-info ul {
+
+  padding: 0;
 }
 .footer-info p {
-  margin: 0;
   font-family: var(--ff);
   font-weight: 500;
 }
 .footer-info a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
+  font-family: var(--ff);
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+.hr-footer {
+  margin: 2% 0 2% 0;
 }
