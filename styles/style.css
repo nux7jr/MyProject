@@ -86,8 +86,6 @@ header {
   background-position: right;
   height: 80%;
 }
-.header-info__item {
-}
 .header-info__item__text {
   font-size: 3rem;
   margin: 0;
@@ -109,14 +107,12 @@ header {
 .card {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
 }
 .card-item {
   flex: 1 0 33%;
+  vertical-align: left;
 }
 
-.card-item img {
-}
 .btnOrder {
   font-family: var(--ff);
   font-weight: 600;
@@ -157,6 +153,9 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.main-info__text h3 {
+  margin-bottom: 1%;
 }
 .info-about-us_item__card {
   display: flex;
