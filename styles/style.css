@@ -8,9 +8,6 @@ html {
   block-size: 100%;
   inline-size: 100%;
 }
-svg {
-  color: black;
-}
 body {
   min-block-size: 100%;
   min-inline-size: 100%;
@@ -140,15 +137,23 @@ header {
   display: flex;
 }
 .main-info__item {
-  flex: 1 0 50%;
+  /* flex: 1 0 50%; */
 }
 .info-about-us_card {
   display: flex;
   flex-wrap: wrap;
 }
-/* .info-about-us__image {
-  position: ;
-} */
+.info-about-us__image {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.info-about-us__image img {
+  height: 250px;
+  width: auto;
+
+  border-radius: 10px;
+}
 .info-about-us__text {
   text-align: center;
   font-family: var(--ff);
@@ -163,8 +168,18 @@ header {
   margin: 0;
   padding: 0;
 }
+.main-info__text li {
+  margin: 1rem;
+}
+.main-info__text li::before {
+  content: " 12313  ";
+  background-color: #333333;
+}
 .main-info__text h3 {
-  margin-bottom: 1%;
+  margin-bottom: 5%;
+}
+.main-info__text h1 {
+  margin: 10% 0 0 0;
 }
 .info-about-us_item__card {
   display: flex;
