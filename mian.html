@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta content="viewport" width="width-device, initial-scale=no"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="/styles/normazile.css">
     <!-- Шрифты -->
@@ -13,7 +13,7 @@
   <body>
       <header>
           <div class="nav">
-            <img src="https://via.placeholder.com/50/FFDD00/002200?Text=BigLogo" alt="logo">
+            <a href="#"><img class="nav-logo" src="/img/Logo.png" alt="logo"></a>
               <div class="menu">
                   <ul>
                   <li class="menu-item"><a href="#">О нас</a></li>
@@ -32,9 +32,6 @@
                 <button class="btn-more-info">Узнать больше</button>
                 </p>
               </div>
-              
-              <div class="header-info__item">
-            </div>
           </div>
         </header>
       <div class="container"> 
@@ -66,6 +63,7 @@
           <p>Исповедуем принципы минимализма и чистоты. Ставим математически расчет превыше креатива. Работаем не покладая рук, как роботы.
           </p>
           <h3>Выполняем заказы на разработку:</h3>
+          <!-- Лучше сделать before -->
             <ul>
               <li><img class="main-info__img" src="/img/-.png" alt="-">Веб-сайтов любой сложности</li>
               <li><img class="main-info__text__img" src="/img/-.png" alt="-">Мобильных приложений</li>
@@ -78,7 +76,7 @@
               <img src="/img/logo.jpg" alt="logo-info">
             </div>
               <div class="info-about-us__text">
-                <p>С 2021 года любим точность во всем:</p>
+                <p>Любим точность во всем:</p>
               </div>
                   <div class="info-about-us_item__card">
                     <div class="info-about-us_item__card__list"><img src="/img/146.svg" alt=""> 
@@ -102,7 +100,6 @@
         </div>
           <hr class="hr-footer">
         </selection>
-                   <!-- может быть карта -->
       <footer>
         <div class="footer-info">
           <ul>
@@ -114,8 +111,26 @@
         </div>
       </footer>
     </div>
-    <script src="js/app.js">
-
-    </script>
+    <!-- Order popup -->
+    <selection>
+      <div class="order-popup">
+        <div class="order-window">
+          <form action="" method="post">
+            <div>
+              <label for="GET-name">Name:</label>
+              <input id="GET-name" type="text" name="name">
+              <div>
+                <label for="GET-name">Email:</label>
+                <input id="GET-name" type="text" name="email">
+              </div> 
+              <div>
+                <label for="GET-name">Phone:</label>
+                <input id="GET-name" type="text" name="phone">
+              </div>  
+          </form>
+        </div>
+      </div>
+    </selection>
+    <script src="js/app.js"></script>
   </body>
 </html>

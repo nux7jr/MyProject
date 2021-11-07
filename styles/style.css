@@ -1,7 +1,6 @@
 :root {
   --margin: 0 0 15% 20%;
   --ff: "Roboto", sans-serif;
-  --: ;
 }
 
 html {
@@ -24,14 +23,14 @@ body {
 .visually-hidden {
   display: none;
 }
+/* Меню и информация */
 header {
   background-color: #eeeeee;
   width: 100%;
-  min-height: 80%;
+  min-height: 332px;
 }
 .nav {
   margin: 0 15% 0 15%;
-  padding-top: 2%;
   display: flex;
   justify-content: space-between;
 
@@ -40,13 +39,16 @@ header {
   /* font-size: ; */
   text-decoration: none;
 }
+.nav-logo {
+  height: 70px;
+}
 .nav ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .nav a {
-  text-decoration: none; /* Убирает подчеркивание для ссылок */
+  text-decoration: none;
   color: rgb(0, 0, 0);
   user-select: none;
 }
@@ -71,24 +73,26 @@ header {
   box-shadow: none;
 }
 .menu-item {
-  display: inline;
+  display: inline-block;
   margin: 10px;
+  padding-top: 10px;
 }
 .header-info {
   display: flex;
   flex-wrap: wrap;
+
   margin: 0 15% 0 15%;
+  height: 400px;
   background-image: url(/img/mediapng.png);
   background-repeat: no-repeat;
   background-position: right;
-  height: 80%;
 }
 .header-info__item__text {
   font-size: 3rem;
-  margin: 0;
   font-weight: 600;
-  max-width: 70%;
 
+  margin: 10% 0 0 0;
+  max-width: 70%;
   /* regular and medium */
 }
 .header-info p {
@@ -96,12 +100,24 @@ header {
 }
 .btn-more-info {
   background-color: #fb565a;
-  font-weight: 600;
-  border: none;
   color: #ffffff;
+
+  font-weight: 500;
+
+  border: none;
+  border-radius: 3px;
+
   margin: 2% 0 0 0;
   padding: 15px 30px 15px 30px;
 }
+.btn-more-info:hover {
+  background-color: #e74246;
+}
+.btn-more-info:active {
+  background-color: d7373b;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Карточки */
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -115,30 +131,52 @@ header {
 .card-item p {
   height: 15%;
 }
+/* 1 кнопка */
 .btnOrder {
   font-family: var(--ff);
-  font-weight: 600;
+  font-weight: 500;
 
   padding: 15px 30px 15px 30px;
 
   outline: none;
   border: none;
+  border-radius: 3px;
   color: #ffffff;
   background-color: #fb565a;
 }
+.btnOrder:hover {
+  background-color: #e74246;
+}
+.btnOrder:active {
+  background-color: d7373b;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* 2 кнопка */
 .card-item:nth-child(2) .btnOrder {
   background-color: #00ca74;
 }
+.card-item:nth-child(2) .btnOrder:hover {
+  background-color: #00bc6c;
+}
+.card-item:nth-child(2) .btnOrder:active {
+  background-color: #00aa62;
+}
+/* 3 кнопка */
 .card-item:nth-child(3) .btnOrder {
   background-color: #efc849;
 }
-
+.card-item:nth-child(3) .btnOrder:hover {
+  background-color: #eab534;
+}
+.card-item:nth-child(3) .btnOrder:active {
+  background-color: #e5a722;
+}
+/* Основная информация */
 .main-info {
   display: flex;
+  justify-content: space-between;
 }
-.main-info__item {
-  /* flex: 1 0 50%; */
-}
+
 .info-about-us_card {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +193,7 @@ header {
   border-radius: 10px;
 }
 .info-about-us__text {
-  text-align: center;
+  text-align: right;
   font-family: var(--ff);
   font-weight: 600;
   font-size: 1.2rem;
@@ -171,10 +209,11 @@ header {
 .main-info__text li {
   margin: 1rem;
 }
-.main-info__text li::before {
+/* Лучше вставить так  */
+/* .main-info__text li::before {
   content: " 12313  ";
   background-color: #333333;
-}
+} */
 .main-info__text h3 {
   margin-bottom: 5%;
 }
@@ -197,11 +236,12 @@ header {
   padding: 0 0 5% 0;
 }
 hr {
-  margin: 5% 0% 5% 0;
+  margin: 2% 0% 2% 0;
 }
 hr:nth-last-child() {
   margin: 0;
 }
+/* Подвал */
 .footer-info {
   display: flex;
   padding-bottom: 2%;
@@ -227,9 +267,65 @@ hr:nth-last-child() {
 .hr-footer {
   margin: 2% 0 2% 0;
 }
-
-@media screen and (max-width: 1289px) {
+/* Всплывающее окно заказа */
+.order-popup {
+  display: none;
+  margin-top: 120px;
+}
+.order-window {
+  position: absolute;
+  height: 150px;
+  left: 40%;
+  top: 50%;
+  border: black solid;
+}
+/* >10 */
+@media screen and (max-width: 1284px) {
   .card-item:last-child {
     margin-top: 5%;
+  }
+  .card-item:last-child p {
+    height: 7%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 2% 7% 0 7%;
+  }
+  .nav {
+    margin: 0 7% 0 7%;
+  }
+  .header-info {
+    margin: 0 7% 0 7%;
+  }
+  .header-info__item p {
+    display: none;
+  }
+  .card-item p {
+    font-size: 1.3rem;
+    height: 20%;
+  }
+  .main-info__text p {
+    font-size: 1.3rem;
+  }
+  .main-info__text li {
+    font-size: 1.3rem;
+  }
+  .info-about-us_item__card__list p {
+    font: 1.3rem;
+  }
+  /* Изменить header на 3 слова */
+  /* все, что ниже под вопросом */
+}
+@media screen and (max-width: 767px) {
+  .card {
+    display: block;
+  }
+  .header-info {
+    margin: 0;
+  }
+  .header-info__item__text {
+    font-size: 2rem;
+    font-weight: 600;
   }
 }
