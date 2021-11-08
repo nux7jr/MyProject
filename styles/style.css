@@ -72,10 +72,13 @@ header {
   color: #333333;
   box-shadow: none;
 }
-.menu-item {
-  display: inline-block;
-  margin: 10px;
-  padding-top: 10px;
+.menu ul {
+  display: flex;
+  margin-top: 8%;
+}
+.menu li a {
+  padding: 1rem;
+  padding-left: 0;
 }
 .header-info {
   display: flex;
@@ -88,6 +91,7 @@ header {
   background-position: right;
 }
 .header-info__item__text {
+  /* Если меньше 300пх сделать меньше */
   font-size: 3rem;
   font-weight: 600;
 
@@ -117,6 +121,11 @@ header {
   background-color: d7373b;
   color: rgba(255, 255, 255, 0.5);
 }
+/* Бургер меню */
+.burger-menu {
+  display: none;
+}
+
 /* Карточки */
 .card {
   display: flex;
@@ -129,7 +138,7 @@ header {
   text-align: center;
 }
 .card-item p {
-  height: 15%;
+  height: 50px;
 }
 /* 1 кнопка */
 .btnOrder {
@@ -181,24 +190,22 @@ header {
   display: flex;
   flex-wrap: wrap;
 }
-.info-about-us__image {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-}
 .info-about-us__image img {
-  height: 250px;
+  max-height: 300px;
   width: auto;
 
   border-radius: 10px;
 }
 .info-about-us__text {
-  text-align: right;
   font-family: var(--ff);
   font-weight: 600;
   font-size: 1.2rem;
 }
+.main-info__item:nth-child(1) {
+  padding-right: 5%;
+}
 .main-info__text img {
+  /* убать */
   padding: 0 1% 1% 0;
 }
 .main-info__text ul {
@@ -208,21 +215,20 @@ header {
 }
 .main-info__text li {
   margin: 1rem;
+  margin-left: 0;
 }
-/* Лучше вставить так  */
-/* .main-info__text li::before {
-  content: " 12313  ";
-  background-color: #333333;
-} */
+.main-info__text li::before {
+  content: url(/img/-.png);
+  display: inline-block;
+  position: relative;
+  padding-right: 7px;
+  top: -5px;
+}
 .main-info__text h3 {
   margin-bottom: 5%;
 }
-.main-info__text h1 {
-  margin: 10% 0 0 0;
-}
 .info-about-us_item__card {
   display: flex;
-  /* flex-wrap: wrap; @media*/
 }
 .info-about-us_item__card p {
   padding: 0;
@@ -281,11 +287,11 @@ hr:nth-last-child() {
 }
 /* >10 */
 @media screen and (max-width: 1284px) {
-  .card-item:last-child {
-    margin-top: 5%;
+  .card-item:nth-child(3) img {
+    margin: 5% 0 0 0;
   }
-  .card-item:last-child p {
-    height: 7%;
+  .card-item:nth-child(3) p {
+    height: 15px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -297,13 +303,6 @@ hr:nth-last-child() {
   }
   .header-info {
     margin: 0 7% 0 7%;
-  }
-  .header-info__item p {
-    display: none;
-  }
-  .card-item p {
-    font-size: 1.3rem;
-    height: 20%;
   }
   .main-info__text p {
     font-size: 1.3rem;
@@ -317,15 +316,95 @@ hr:nth-last-child() {
   /* Изменить header на 3 слова */
   /* все, что ниже под вопросом */
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .card {
     display: block;
   }
-  .header-info {
-    margin: 0;
+  .info-about-us_item__card {
+    flex-wrap: wrap;
   }
-  .header-info__item__text {
-    font-size: 2rem;
-    font-weight: 600;
+  .main-info__text {
+    padding-right: 20px;
   }
+  .card-item:nth-child(2) img {
+    margin: 5% 0 0 0;
+  }
+  .main-info {
+    display: block;
+  }
+  .main-info__item:nth-child(1) {
+    padding: 0;
+  }
+  .main-info__text {
+    padding: 0;
+  }
+  .info-about-us__image {
+    text-align: center;
+    max-height: 400px;
+    /* Сделать в % */
+  }
+  /* burger */
+  .menu ul {
+    display: block;
+    position: absolute;
+  }
+  .menu {
+    background-color: rgb(143, 69, 69);
+  }
+  .burger-menu {
+    position: relative; /* задаем относительное позиционирование */
+    width: 40px; /* определяем размеры блока */
+    height: 45px;
+    display: block;
+    margin-left: 10px;
+  }
+  .burger-menu span,
+  .burger-menu:after,
+  .burger-menu:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #515758;
+    margin: 0 auto;
+  }
+  .burger-menu span {
+    top: 35px;
+  }
+  .burger-menu:after,
+  .burger-menu:before {
+    content: "";
+  }
+  .burger-menu:after {
+    bottom: -5px;
+  }
+  .burger-menu:before {
+    top: 22px;
+  }
+  .menu ul {
+    display: block;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 25px;
+
+    background-color: rgb(143, 69, 69);
+  }
+  .menu {
+    margin-top: 15%;
+  }
+  .menu-item {
+    margin: 40px;
+    text-align: center;
+  }
+  .menu-item a {
+    padding: 50px;
+  }
+  .btn-order {
+    background-color: inherit;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* img and rem in header! */
 }
