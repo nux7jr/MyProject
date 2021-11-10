@@ -1,5 +1,4 @@
 :root {
-  --margin: 0 0 15% 20%;
   --ff: "Roboto", sans-serif;
 }
 
@@ -17,6 +16,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .container {
   margin: 2% 15% 0 15%;
 }
@@ -86,7 +86,24 @@ header {
 
   margin: 0 15% 0 15%;
   height: 400px;
-  background-image: url(/img/mediapng.png);
+
+  position: relative;
+  z-index: 1;
+
+  /* background-image: url(/img/mediapng.png);
+  background-repeat: no-repeat;
+  background-position: right; */
+}
+.header-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+  background: url(/img/mediapng.png);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -97,6 +114,7 @@ header {
 
   margin: 10% 0 0 0;
   max-width: 70%;
+
   /* regular and medium */
 }
 .header-info p {
@@ -125,7 +143,9 @@ header {
 .burger-menu {
   display: none;
 }
-
+.burger-menu--active {
+  /* display: block; */
+}
 /* Карточки */
 .card {
   display: flex;
@@ -317,6 +337,24 @@ hr:nth-last-child() {
   /* все, что ниже под вопросом */
 }
 @media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background: #eeeeee;
+    margin: 0.1px;
+    z-index: 2;
+  }
+  .burger-menu--active {
+    margin-right: 10px;
+  }
+  .nav-logo {
+    margin-left: 10px;
+  }
+  .header-info {
+    padding-top: 10%;
+  }
   .card {
     display: block;
   }
@@ -352,8 +390,8 @@ hr:nth-last-child() {
     background-color: rgb(143, 69, 69);
   }
   .burger-menu {
-    position: relative; /* задаем относительное позиционирование */
-    width: 40px; /* определяем размеры блока */
+    position: relative;
+    width: 40px;
     height: 45px;
     display: block;
     margin-left: 10px;
@@ -381,28 +419,58 @@ hr:nth-last-child() {
     top: 22px;
   }
   .menu ul {
-    display: block;
+    display: none;
 
     position: absolute;
     right: 0;
     left: 0;
-    top: 25px;
+    top: 15%;
 
-    background-color: rgb(143, 69, 69);
+    margin-top: 50px;
+
+    background-color: #333333;
+    color: #eeeeee;
+
+    transition: all 0.4s ease;
+    /* сделать анимацию */
+  }
+  .menu--active ul {
+    display: block;
   }
   .menu {
     margin-top: 15%;
   }
   .menu-item {
-    margin: 40px;
+    padding: 20px;
     text-align: center;
+  }
+  .menu li:hover {
+    background: rgb(24, 23, 23);
   }
   .menu-item a {
     padding: 50px;
+    color: #eeeeee;
+  }
+  .menu-item a:hover {
+    color: #b8b4b4;
   }
   .btn-order {
     background-color: inherit;
     padding-right: 10px;
+    color: inherit;
+  }
+  .btn-order:hover {
+    color: #b8b4b4;
+  }
+  .header-info::before {
+    opacity: 0.6;
+  }
+  .header-info__item {
+    color: black;
+    font-weight: 600;
+  }
+  .header-info p {
+    color: black;
   }
 }
 @media screen and (max-width: 320px) {
