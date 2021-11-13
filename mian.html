@@ -14,19 +14,21 @@
       <header>
           <div class="nav">
             <a href="#"><img class="nav-logo" src="/img/Logo.png" alt="logo"></a>
+            <!-- Удалить -->
               <div class="menu">
                   <ul class="list-menu">
                   <li class="menu-item"><a href="#">О нас</a></li>
                   <li class="menu-item"><a href="#">Отзывы</a></li>
                   <li class="menu-item"><a href="#">Контакты</a></li>
-                  <li class="menu-item"><button type="button" class="btn-order">Заказать</button></li>
+                  <!-- id ниже -->
+                  <li class="menu-item"><button type="button" class="btn-order" id="scrollDownBttn">Заказать</button></li>
                 </ul>
               </div>
 
 <!-- Бургер меню -->
 
               <div class="burger-menu">
-                  <span class="burger-menu-icon"></span>
+                  <div><img class="burger-menu-icon" src="/img/burger-menu.png" alt=""></div>
               </div>
 
 
@@ -122,16 +124,19 @@
     <selection>
       <div class="order-popup">
         <div class="order-window">
+          <p>Вы можете оставить заявку.</p>
+          <p>Наш консультант с вами свяжется</p>
+          <button class="close-form-btn">Закрыть</button>
           <form action="" method="post">
             <div>
               <label for="GET-name">Name:</label>
               <input id="GET-name" type="text" name="name">
               <div>
-                <label for="GET-name">Email:</label>
+                <label for="GET-email">Email:</label>
                 <input id="GET-name" type="text" name="email">
               </div> 
               <div>
-                <label for="GET-name">Phone:</label>
+                <label for="GET-phone">Phone:</label>
                 <input id="GET-name" type="text" name="phone">
               </div>  
           </form>

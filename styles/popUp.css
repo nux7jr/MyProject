@@ -1,0 +1,29 @@
+/* Всплывающее окно заказа */
+.order-window {
+  display: none;
+  position: fixed;
+
+  left: 32%;
+  top: 40%;
+
+  width: 40%;
+  height: auto;
+
+  background-color: azure;
+  border-radius: 15px;
+
+  /* box-shadow: Сделать тень */
+  border: black solid;
+
+  z-index: 2;
+}
+.close-form-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: red;
+}
+.order-window--active {
+  display: block;
+}
+/* цвет меню не на всю площадь */

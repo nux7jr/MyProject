@@ -1,3 +1,5 @@
+@import url(/styles/burger.css);
+@import url(/styles/popUp.css);
 :root {
   --ff: "Roboto", sans-serif;
 }
@@ -138,13 +140,6 @@ header {
 .btn-more-info:active {
   background-color: d7373b;
   color: rgba(255, 255, 255, 0.5);
-}
-/* Бургер меню */
-.burger-menu {
-  display: none;
-}
-.burger-menu--active {
-  /* display: block; */
 }
 /* Карточки */
 .card {
@@ -293,18 +288,6 @@ hr:nth-last-child() {
 .hr-footer {
   margin: 2% 0 2% 0;
 }
-/* Всплывающее окно заказа */
-.order-popup {
-  display: none;
-  margin-top: 120px;
-}
-.order-window {
-  position: absolute;
-  height: 150px;
-  left: 40%;
-  top: 50%;
-  border: black solid;
-}
 /* >10 */
 @media screen and (max-width: 1284px) {
   .card-item:nth-child(3) img {
@@ -319,7 +302,7 @@ hr:nth-last-child() {
     margin: 2% 7% 0 7%;
   }
   .nav {
-    margin: 0 7% 0 7%;
+    margin: 0 2% 0 2%;
   }
   .header-info {
     margin: 0 7% 0 7%;
@@ -338,22 +321,7 @@ hr:nth-last-child() {
 }
 @media screen and (max-width: 768px) {
   .nav {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 80px;
-    background: #eeeeee;
-    margin: 0.1px;
-    z-index: 2;
-  }
-  .burger-menu--active {
-    margin-right: 10px;
-  }
-  .nav-logo {
-    margin-left: 10px;
-  }
-  .header-info {
-    padding-top: 10%;
+    margin: 0.001px;
   }
   .card {
     display: block;
@@ -382,86 +350,7 @@ hr:nth-last-child() {
     /* Сделать в % */
   }
   /* burger */
-  .menu ul {
-    display: block;
-    position: absolute;
-  }
-  .menu {
-    background-color: rgb(143, 69, 69);
-  }
-  .burger-menu {
-    position: relative;
-    width: 40px;
-    height: 45px;
-    display: block;
-    margin-left: 10px;
-  }
-  .burger-menu span,
-  .burger-menu:after,
-  .burger-menu:before {
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background: #515758;
-    margin: 0 auto;
-  }
-  .burger-menu span {
-    top: 35px;
-  }
-  .burger-menu:after,
-  .burger-menu:before {
-    content: "";
-  }
-  .burger-menu:after {
-    bottom: -5px;
-  }
-  .burger-menu:before {
-    top: 22px;
-  }
-  .menu ul {
-    display: none;
 
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 15%;
-
-    margin-top: 50px;
-
-    background-color: #333333;
-    color: #eeeeee;
-
-    transition: all 0.4s ease;
-    /* сделать анимацию */
-  }
-  .menu--active ul {
-    display: block;
-  }
-  .menu {
-    margin-top: 15%;
-  }
-  .menu-item {
-    padding: 20px;
-    text-align: center;
-  }
-  .menu li:hover {
-    background: rgb(24, 23, 23);
-  }
-  .menu-item a {
-    padding: 50px;
-    color: #eeeeee;
-  }
-  .menu-item a:hover {
-    color: #b8b4b4;
-  }
-  .btn-order {
-    background-color: inherit;
-    padding-right: 10px;
-    color: inherit;
-  }
-  .btn-order:hover {
-    color: #b8b4b4;
-  }
   .header-info::before {
     opacity: 0.6;
   }
@@ -473,6 +362,13 @@ hr:nth-last-child() {
     color: black;
   }
 }
+@media screen and (max-width: 513px) {
+  .card-item:nth-child(3) p {
+    margin-bottom: 30px;
+  }
+  .card-item:nth-child(3) .btnOrder {
+    margin-bottom: 20px;  
+  }
 @media screen and (max-width: 320px) {
   /* img and rem in header! */
 }
