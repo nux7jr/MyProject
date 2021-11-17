@@ -14,14 +14,12 @@
       <header>
           <div class="nav">
             <a href="#"><img class="nav-logo" src="/img/Logo.png" alt="logo"></a>
-            <!-- Удалить -->
               <div class="menu">
                   <ul class="list-menu">
                   <li class="menu-item"><a href="#">О нас</a></li>
                   <li class="menu-item"><a href="#">Отзывы</a></li>
                   <li class="menu-item"><a href="#">Контакты</a></li>
-                  <!-- id ниже -->
-                  <li class="menu-item"><button type="button" class="btn-order" id="scrollDownBttn">Заказать</button></li>
+                  <li class="menu-item"><button type="button" class="btn-order">Заказать</button></li>
                 </ul>
               </div>
 
@@ -39,33 +37,33 @@
                 
                 <p>Выверенный дизайн для вашего сайта<br>
                 или мобильного приложения<br>
-                <button class="btn-more-info">Узнать больше</button>
+                <button class="btn-more-info" id="scrollDownBtn">Узнать больше</button>
                 </p>
               </div>
           </div>
         </header>
       <div class="container"> 
-        <div class="card">
+        <div class="card" id="cardId">
           <div class="card-item">
             <img class="card-image" src="/img/illustration.png" alt="illustration">
               <h2>Веб-сайты</h2>
-              <p>С нуля создаем дизай и верстаем сайт<br> Так-же доделываем проекты</p>
-              <button class="btnOrder">Заказать</button>
+              <p>С нуля создаем дизай и верстаем сайт. Так-же доделываем проекты</p>
+              <button class="btnOrder" id="card-bnt-oreder">Заказать</button>
           </div>
           <div class="card-item">
             <img class="card-image" src="/img/illustration-2.png" alt="illustration">
             <h2>Мобильные приложения</h2>
               <p>Покорите топ-10 приложений в AppStore или Google Play. Создадим мольное приложения для вашего продукта</p>
-              <button class="btnOrder">Заказать</button>
+              <button class="btnOrder" id="card-bnt-oreder" >Заказать</button>
           </div>
           <div class="card-item">
             <img class="card-image" src="/img/illustration-3.png" alt="illustration">
             <h2>Реклама и сопровождение</h2>
               <p>Занимаемся рекломай и сопровождение вашего продукта</p>
-              <button class="btnOrder">Заказать</button>
+              <button class="btnOrder" id="card-bnt-oreder" >Заказать</button>
           </div>
         </div>
-        <hr>
+        <hr class="main-info-hr">
         <selection>
         <div class="main-info">
           <div class="main-info__item">
@@ -120,31 +118,34 @@
         </div>
       </footer>
     </div>
+
     <!-- Order popup -->
+
     <selection>
       <div class="order-popup">
         <div class="order-window">
-          <p>Вы можете оставить заявку.</p>
-          <p>Наш консультант с вами свяжется</p>
-          <button class="close-form-btn">Закрыть</button>
+          <div class="order-window__text">
+            <p>Вы можете оставить заявку.</p>
+            <p>Наш консультант с вами свяжется</p>
+          </div>
+          <button class="close-form-btn">X</button>
           <form action="" method="post">
             <div>
-              <label for="GET-name">Name:</label>
-              <input id="GET-name" type="text" name="name">
+              <label class="visually-hidden" for="GET-name">Имя:</label>
+              <input class="input" id="GET-name" type="text" name="name" placeholder="Ваше имя:">
               <div>
-                <label for="GET-email">Email:</label>
-                <input id="GET-name" type="text" name="email">
+                <label class="visually-hidden" for="GET-email">Email:</label>
+                <input class="input" id="GET-name" type="text" name="email" placeholder="Ваш email:">
               </div> 
               <div>
-                <label for="GET-phone">Phone:</label>
-                <input id="GET-name" type="text" name="phone">
+                <label class="visually-hidden" for="GET-phone">Телефон:</label>
+                <input class="input" id="GET-name" type="text" name="phone" placeholder="Ваш телефон:">
               </div>  
           </form>
+          <button class="enterInfoBtn" type="submit">Отправить</button>
         </div>
       </div>
     </selection>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
     <script src="js/app.js"></script>
   </body>
 </html>

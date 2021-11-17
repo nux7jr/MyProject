@@ -3,27 +3,72 @@
   display: none;
   position: fixed;
 
-  left: 32%;
-  top: 40%;
+  font: inherit;
+  font-size: 1rem;
 
-  width: 40%;
+  top: 20px;
+
+  left: calc(100% - 55vw);
+  width: 15vw;
   height: auto;
 
-  background-color: azure;
-  border-radius: 15px;
-
-  /* box-shadow: Сделать тень */
-  border: black solid;
+  box-shadow: 1px 1px 4px black;
+  background-color: rgb(241, 240, 240);
 
   z-index: 2;
+
+  background-image: url(/img/bg-popUp.jpg) opacity 1;
+  background-repeat: repeat;
+}
+.order-window__text {
+  display: block;
+  margin-top: 1rem;
+  margin: 20px;
+}
+.input {
+  border: 3px solid rgb(61, 59, 59);
+
+  background-color: rgb(241, 240, 240);
+
+  padding: 5px;
+  margin-bottom: 5%;
+
+  width: calc(100% - 30px);
 }
 .close-form-btn {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: red;
+
+  color: black;
+  background: none;
+
+  border: none;
+
+  font-weight: 600;
+}
+.enterInfoBtn {
+  background-color: black;
+  color: white;
+
+  margin: 3%;
+
+  border: none;
+
+  padding: 5px 10px 5px 10px;
 }
 .order-window--active {
-  display: block;
+  width: auto;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  text-align: center;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* цвет меню не на всю площадь */

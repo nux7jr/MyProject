@@ -11,12 +11,11 @@ html {
 body {
   min-block-size: 100%;
   min-inline-size: 100%;
-  margin: 0;
   box-sizing: border-box;
   place-content: center;
   font-family: var(--ff);
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .container {
@@ -76,7 +75,7 @@ header {
 }
 .menu ul {
   display: flex;
-  margin-top: 8%;
+  margin-top: 20px;
 }
 .menu li a {
   padding: 1rem;
@@ -91,10 +90,6 @@ header {
 
   position: relative;
   z-index: 1;
-
-  /* background-image: url(/img/mediapng.png);
-  background-repeat: no-repeat;
-  background-position: right; */
 }
 .header-info::before {
   content: "";
@@ -361,6 +356,10 @@ hr:nth-last-child() {
   .header-info p {
     color: black;
   }
+  .order-window--active {
+    width: 90%;
+    top: 20%;
+  }
 }
 @media screen and (max-width: 513px) {
   .card-item:nth-child(3) p {
@@ -369,6 +368,16 @@ hr:nth-last-child() {
   .card-item:nth-child(3) .btnOrder {
     margin-bottom: 20px;  
   }
-@media screen and (max-width: 320px) {
-  /* img and rem in header! */
+@media screen and (max-width: 379px) {
+  .header-info__item__text {
+    padding-top: 50px;
+    font-size: 2rem;
+  }
+  img {
+    max-width: 200px;
+  }
+  .btnOrder {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
