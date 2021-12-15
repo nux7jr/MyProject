@@ -1,8 +1,6 @@
-@import url(/styles/burger.css);
-@import url(/styles/popUp.css);
-:root {
-  --ff: "Roboto", sans-serif;
-}
+@import url(blocks/burger.css);
+@import url(blocks/normalize.css);
+@import url(blocks/popUp.css);
 
 html {
   block-size: 100%;
@@ -13,7 +11,7 @@ body {
   min-inline-size: 100%;
   box-sizing: border-box;
   place-content: center;
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   padding: 0;
   /* margin: 0; */
 }
@@ -35,7 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
 
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   /* font-size: ; */
   text-decoration: none;
@@ -58,7 +56,7 @@ header {
   color: #283136;
 }
 .btn-order {
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   user-select: none;
   padding: 0;
@@ -152,7 +150,7 @@ header {
 }
 /* 1 кнопка */
 .btnOrder {
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 
   padding: 15px 30px 15px 30px;
@@ -254,7 +252,7 @@ header {
 hr {
   margin: 2% 0% 2% 0;
 }
-hr:nth-last-child() {
+hr:nth-last-child(1) {
   margin: 0;
 }
 /* Подвал */
@@ -270,13 +268,13 @@ hr:nth-last-child() {
   padding: 0;
 }
 .footer-info p {
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 .footer-info a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-family: var(--ff);
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-size: 0.8em;
 }
@@ -366,18 +364,19 @@ hr:nth-last-child() {
     margin-bottom: 30px;
   }
   .card-item:nth-child(3) .btnOrder {
-    margin-bottom: 20px;  
-  }
-@media screen and (max-width: 379px) {
-  .header-info__item__text {
-    padding-top: 50px;
-    font-size: 2rem;
-  }
-  img {
-    max-width: 200px;
-  }
-  .btnOrder {
-    margin-top: 20px;
     margin-bottom: 20px;
+  }
+  @media screen and (max-width: 379px) {
+    .header-info__item__text {
+      padding-top: 50px;
+      font-size: 2rem;
+    }
+    img {
+      max-width: 200px;
+    }
+    .btnOrder {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 }
