@@ -133,20 +133,22 @@
           <form action="" method="post">
             <div>
               <label class="visually-hidden" for="GET-name">Имя:</label>
-              <input class="input" id="GET-name" type="text" name="name" placeholder="Ваше имя:">
+              <input class="input-name input" id="GET-name" type="text" name="name" placeholder="Ваше имя:" minlength="2" maxlength="15" required>
               <div>
                 <label class="visually-hidden" for="GET-email">Email:</label>
-                <input class="input" id="GET-name" type="text" name="email" placeholder="Ваш email:">
+                <input class="input-email input" id="GET-email" type="text" name="email" placeholder="Ваш email:" minlength="7" maxlength="15" required>
               </div> 
               <div>
                 <label class="visually-hidden" for="GET-phone">Телефон:</label>
-                <input class="input" id="GET-name" type="text" name="phone" placeholder="Ваш телефон:">
+                <input class="input-phone input" id="GET-phone" type="tel" name="phone" placeholder="Ваш телефон:" minlength="2" maxlength="15" required>
+                <small class="formHelp">Мы не передаём ваши данные.</small>
               </div>  
           </form>
           <button class="enterInfoBtn" type="submit">Отправить</button>
         </div>
       </div>
     </selection>
+    <script src="/dist/js/formValid.js"></script>
     <script src="/dist/js/app.js" defer></script>
   </body>
 </html>
